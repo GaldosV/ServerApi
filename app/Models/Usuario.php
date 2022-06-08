@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Usuario extends Model
 {
     use HasFactory;
-    protected $fillable =['ID_TOKEN','PROCEDENCIA','IDIOMA','OPINION','APP_ID'];
+    protected $fillable =['id_token','procedencia','idioma','opinion','app_id'];
 }

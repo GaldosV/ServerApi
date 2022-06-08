@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration
 {
     /**
-     * Run the migrations.
+     * Migraciones iniciales de la tabla usuarios que es la que recoge los usuarios de la base de datos
      *
      * @return void
      */
@@ -15,20 +15,20 @@ return new class extends Migration
     {
         Schema::create       ('usuarios', function (Blueprint $table) {
             $table ->id();
-            $table -> string ('ID_TOKEN',50);
-            $table -> string ('PROCEDENCIA',30) ->nullable();
-            $table -> string ('IDIOMA',30) ->nullable();
-            $table -> string ('USERLOCATION',500) ->nullable();
-            $table -> text   ('POIVISITED') ->nullable();
-            $table -> integer('OPINION') ->nullable();
-            $table -> foreignId ('APP_ID') ->nullable() ;
+            $table -> string ('id_token',50);
+            $table -> string ('procedencia',30) ->nullable();
+            $table -> integer ('idioma') ->nullable();
+            $table -> string ('userlocation',500) ->nullable();
+            $table -> text   ('poivisited') ->nullable();
+            $table -> integer('opinion') ->nullable();
+            $table -> foreignId ('app_id') ->nullable() ;
             $table->timestamps();
 
         });
     }
 
     /**
-     * Reverse the migrations.
+     * Para revertir la migracion de la tabla de usuarios
      *
      * @return void
      */
